@@ -1,0 +1,1 @@
+<?php echo preg_replace('#(<br */?>\s*)+#i', ' ', get_sub_field('short_title'));?>

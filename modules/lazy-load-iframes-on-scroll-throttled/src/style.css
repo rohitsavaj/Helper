@@ -1,0 +1,47 @@
+body{
+  font-family: 'Raleway', sans-serif;
+  background-color: #edeff1;
+}
+div.iframe {
+  width: 470px;
+  height: 280px;
+  background-color: #4682B4;
+  display: flex;
+}
+div.iframe span {
+  margin: auto;
+}
+.vid-group h3 {
+  margin-top: 2.5em;
+}
+.vid-group iframe {
+  margin-bottom: 1.5em;
+}
+.vid-group {
+  border-bottom: 1px solid #a6a6a6;
+}
+#jump-menu a {
+  display: inline-block;
+  width: 15%;
+}
+.sticky {
+  position: fixed;
+  right: 10px;
+  background-color: #efefef;
+  color: firebrick;
+  padding: 7.5px;
+}
+#stick1 {
+  top: 100px;
+}
+#stick2 {
+  top: 150px;
+}
+#example {
+  display: flex;
+}
+#example span {
+  margin: auto;
+  font-size: 30pt;
+}
+

@@ -1,0 +1,11 @@
+ajax cart count 
+
+https://iconicwp.com/blog/update-custom-cart-count-html-ajax-add-cart-woocommerce/
+	
+<div class="header-cart-count"><?php echo WC()->cart->get_cart_contents_count(); ?></div>
+
+add_filter( 'woocommerce_add_to_cart_fragments', 'show_cart_count_fun', 10, 1 );
+function show_cart_count_fun( $fragments_cnt ) {
+    $fragments_cnt['div#header-cart-count'] = '<div class="header-cart-count">' . WC()->cart->get_cart_contents_count() . '</div>';
+    return $fragments_cnt;
+}
