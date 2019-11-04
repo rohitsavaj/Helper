@@ -20,7 +20,7 @@ jQuery(function ($) {
             if (check_href.indexOf('tel:') != -1 || check_href.indexOf('mailto:') != -1 || check_href.indexOf('sms:') != -1 || check_href == '#' || check_href == 'javascript:void(0);') {
                 $(this).attr('data-other', '1');
             }
-            var fileExtension = ['pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'slxs', 'epub', 'odp', 'ods', 'txt', 'rtf', 'vcf$'];
+            var fileExtension = ['pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx', 'epub', 'odp', 'ods', 'txt', 'rtf', 'vcf$'];
             if ($.inArray($(this).attr('href').split('.').pop().toLowerCase(), fileExtension) > -1) {
                 $(this).attr('data-file', '1');
             }
