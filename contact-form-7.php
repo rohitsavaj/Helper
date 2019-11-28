@@ -37,24 +37,23 @@ Mail format
 <style>table tr th,table tr td{vertical-align:top}</style>
 <div class="main-box" style="border: 1px solid #dddddd;border-radius: 5px; width: 650px;float: none;text-align: center; margin:40px auto; overflow: hidden;">
 <div class="mb-header" style="background:#f2f2f2; padding: 20px 30px;">
-<a href="https://www.law-ohio.webslawdemo.com"><img src="https://www.law-ohio.webslawdemo.com/wp-content/uploads/2019/06/logo.png"/></a>
+<a href="https://crescent.glasier.in"><img src="https://crescent.glasier.in/wp-content/uploads/2019/10/Cresent-letter.png"/></a>
 </div>
 <div class="mb-content" style="background:#fff; padding: 25px;text-align: left;">
 <table cellpadding="5" border="0" cellspacing="0" width="100%">
-<tr><td colspan="2">A new inquiry has been submitted to the firm. Please review the details below.</td></tr>
+<tr><td colspan="2">A new inquiry has been submitted to the website. Please review the details below.</td></tr>
 <tr><td colspan="2">&nbsp;</td></tr>
 <tr><th width="150" valign="top">Name:</th><td>[your-name]</td></tr>
-<tr><th valign="top">Phone:</th><td>[your-phone]</td></tr>
 <tr><th valign="top">Email:</th><td>[your-email]</td></tr>
+<tr><th valign="top">Phone:</th><td>[your-phone]</td></tr>
+<tr><th valign="top">Subject:</th><td>[your-subject]</td></tr>
 <tr><th valign="top">Message:</th><td>[your-message]</td></tr>
 <tr><td colspan="2">&nbsp;</td></tr>
-<tr><td colspan="2">This e-mail was sent from a contact form on <a href="https://www.law-ohio.webslawdemo.com/">Paulozzi Injury Lawyers</td></tr>
+<tr><td colspan="2">This e-mail was sent from a contact form on <a href="https://crescent.glasier.in">Crescent</td></tr>
 </table>
 </div>
-<div class="mb-footer" style="background:#f2f2f2; padding:5px; text-align:center;">
-<a href="https://www.webslaw.com/" title="Webslaw" target="_blank">
-<img src="https://www.law-ohio.webslawdemo.com/wp-content/themes/law-ohio/images/webslaw-logo.png" alt="Webslaw" style="width:120px;">
-</a>
+<div class="mb-footer" style="background:#03316c; padding:5px; text-align:center;">
+<a href="https://glasierinc.com/" target="_blank"><img src="https://glasierinc.com/wp-content/uploads/2019/01/logo.png?id=1132" style="width:120px;"></a>
 </div>
 </div>
 
@@ -72,7 +71,7 @@ wpcf7-submit
 terms:
 [acceptance acceptance-195] I have read the <a href="https://www.kornberglawfirm.com/Disclaimer" title="Disclaimer" target="_blank">Disclaimer</a> and <a href="https://www.kornberglawfirm.com/Privacy-Policy" title="Privacy" target="_blank"> Privacy Policy</a> Terms.
 
-wp-cpnfig.php
+wp-config.php
 define('WPCF7_AUTOP', false);
 
 <button class="wpcf7-submit" type="submit">Get a Prompt Response</button>
