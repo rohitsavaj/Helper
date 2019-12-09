@@ -5,10 +5,13 @@ your-phone
 [tel* your-phone minlength:10 maxlength:15 class:form-control placeholder "Phone Number *"]
 
 your-email
-[email* your-email autocomplete:off class:form-control placeholder "Email *"]
+[email* your-email x3 autocomplete:off class:form-control placeholder "Email *"]
 
 your-message
 [textarea your-message class:form-control placeholder "Brief description of your legal issue"]
+[textarea* your-message x3 class:form-control] <!-- only rows -->
+[textarea* your-message 10x class:form-control] <!-- only columns -->
+[textarea* your-message 10x3 class:form-control] <!-- both -->
 
 your-zip
 [text your-zip class:form-control placeholder "Zip Code"]
