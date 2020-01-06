@@ -10,7 +10,8 @@ function wp_enqueue_scripts_fun() {
 	wp_enqueue_style('montserrat', 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700', array(), null);
 	wp_enqueue_style('oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700', array(), null);
 	wp_enqueue_style('open-sans', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600', array(), null);
-	wp_enqueue_style('font-awesome', get_template_directory_uri().'/css/font-awesome.min.css', array(), null);
+	wp_enqueue_style('font-awesome', get_template_directory_uri().'/css/font-awesome.css', array(), null);
+	wp_enqueue_style('font-awesome', get_template_directory_uri().'/css/font-awesome.css', array(), null);
 	wp_enqueue_style('animate-css', get_template_directory_uri().'/css/animate.min.css', array('bootstrap-css'),null);
 	wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/css/bootstrap.min.css',array(),null);
 	wp_enqueue_style('style-css', get_template_directory_uri().'/style.css', array(), null);
@@ -308,3 +309,33 @@ function remove_default_image_sizes( $sizes ) {
 	return $sizes;
 }
 add_filter( 'intermediate_image_sizes_advanced', 'remove_default_image_sizes' );
+
+/*
+|--------------------------------------------------------------------------
+| webp support
+|--------------------------------------------------------------------------
+*/
+function webp_upload_mimes($existing_mimes) {
+	$existing_mimes['webp'] = 'image/webp';
+	return $existing_mimes;
+}
+add_filter('mime_types', 'webp_upload_mimes');
+
+//enable preview / thumbnail for webp image files.
+function webp_is_displayable($result, $path) {
+	if ($result === false) {
+		$displayable_image_types = array( IMAGETYPE_WEBP );
+		$info = @getimagesize( $path );
+
+		if (empty($info)) {
+			$result = false;
+		} elseif (!in_array($info[2], $displayable_image_types)) {
+			$result = false;
+		} else {
+			$result = true;
+		}
+	}
+
+	return $result;
+}
+add_filter('file_is_displayable_image', 'webp_is_displayable', 10, 2);
