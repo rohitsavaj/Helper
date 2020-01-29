@@ -40,7 +40,7 @@ Mail format
 <style>table tr th,table tr td{vertical-align:top}</style>
 <div class="main-box" style="border: 1px solid #dddddd;border-radius: 5px; width: 650px;float: none;text-align: center; margin:40px auto; overflow: hidden;">
 <div class="mb-header" style="background:#f2f2f2; padding: 20px 30px;">
-<a href="https://crescent.glasier.in"><img src="https://crescent.glasier.in/wp-content/uploads/2019/10/Cresent-letter.png"/></a>
+<a href="https://polkatots.glasier.in"><img src="https://polkatots.glasier.in/wp-content/uploads/2020/01/plka-logo-min.png"/></a>
 </div>
 <div class="mb-content" style="background:#fff; padding: 25px;text-align: left;">
 <table cellpadding="5" border="0" cellspacing="0" width="100%">
@@ -52,7 +52,7 @@ Mail format
 <tr><th valign="top">Subject:</th><td>[your-subject]</td></tr>
 <tr><th valign="top">Message:</th><td>[your-message]</td></tr>
 <tr><td colspan="2">&nbsp;</td></tr>
-<tr><td colspan="2">This e-mail was sent from a contact form on <a href="https://crescent.glasier.in">Crescent</td></tr>
+<tr><td colspan="2">This e-mail was sent from a contact form on <a href="https://polkatots.glasier.in">Polkatots</td></tr>
 </table>
 </div>
 <div class="mb-footer" style="background:#03316c; padding:5px; text-align:center;">
