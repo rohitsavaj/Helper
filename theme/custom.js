@@ -133,4 +133,16 @@ jQuery(function ($) {
         $('.sec2 .pi-listing-main ul li').myfunction();
     }
 // count LI
+
+// first last li and remove class
+    $('ul').each(function(){
+        $(this).find('li:first-child').addClass('first');
+        $(this).find('li:last-child').addClass('last');
+    });
+    $('li').each(function(){
+        var last = $(this);
+        last.hasClass('last') === true ? last.removeClass('mb-4') : '';
+        last.hasClass('last') === true ? last.removeClass('mb-4') : '';
+    });
+// first last li and remove class
 });

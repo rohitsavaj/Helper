@@ -7,6 +7,9 @@ your-phone
 your-email
 [email* your-email autocomplete:off class:form-control placeholder "Email *"]
 
+your-subject
+[text your-subject class:form-control placeholder "Subject"]
+
 your-message
 [textarea your-message class:form-control placeholder "Brief description of your legal issue"]
 [textarea* your-message x3 class:form-control] <!-- only rows -->
@@ -20,7 +23,7 @@ To  shruti.radadiya@webslaw.com,tushar.patel@webslaw.com,harsh.vasitha@webslaw.c
 
 From  [your-name] <wordpress@kornberglawfirm.com>
 
-Subject WebsLaw Lead: [your-name] Contacting The Kaufman Law Firm
+Subject [your-name] Contacting [_site_title]
 
 Additional Headers: Reply-To: [your-email]
 Bcc: leads@webslaw.com
