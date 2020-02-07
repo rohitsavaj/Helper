@@ -365,3 +365,40 @@ function na_parse_request( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'na_parse_request' );
+
+/*
+|--------------------------------------------------------------------------
+| acf admin slug
+| https://www.advancedcustomfields.com/resources/acf-render_field/
+| https://www.coderomeos.org/select-and-copy-data-to-clipboard-using-jquery
+|--------------------------------------------------------------------------
+*/
+function my_acf_input_admin_footer() {
+	if ( get_post_type() != 'acf-field-group' ) { ?>
+		<script type="text/javascript">
+            jQuery(function($) {
+                $('#wpwrap').each(function(index) {
+                    $(this).on('click','.copy-to-clipboard input', function() {
+                        $(this).focus();
+                        $(this).select();
+                        document.execCommand('copy');
+                        //$(".copied").text("Copied to clipboard").show().fadeOut(1200);
+                    });
+                });
+            });
+		</script>
+		<?php
+	}
+}
+add_action('acf/input/admin_footer', 'my_acf_input_admin_footer');
+
+add_action('acf/render_field', 'show_field_details', 1);
+function show_field_details($field) {
+	if ( get_post_type() !='acf-field-group' ) {
+		echo '
+	<div class="description copy-to-clipboard" style="margin-bottom: 10px;">
+		<input readonly="readonly" type="text" value="'.trim($field['_name']).'" style="color: #0c5460;">
+	</div>
+	';
+	}
+}

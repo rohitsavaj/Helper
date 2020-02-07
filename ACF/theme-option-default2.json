@@ -21,32 +21,8 @@
             },
             {
                 "key": "field_5c331b7763629",
-                "label": "site_logo",
-                "name": "site_logo",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_5e12cc7689886",
-                "label": "site_logo_webp",
-                "name": "site_logo_webp",
+                "label": "site logo 3340",
+                "name": "site_logo_3340",
                 "type": "image",
                 "instructions": "",
                 "required": 0,
@@ -69,32 +45,8 @@
             },
             {
                 "key": "field_5ca1b59c15c6b",
-                "label": "footer_logo",
-                "name": "footer_logo",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_5e12cc9a89887",
-                "label": "footer_logo_webp",
-                "name": "footer_logo_webp",
+                "label": "footer logo 6571",
+                "name": "footer_logo_6571",
                 "type": "image",
                 "instructions": "",
                 "required": 0,
@@ -117,8 +69,8 @@
             },
             {
                 "key": "field_5c33201218a2f",
-                "label": "favicon",
-                "name": "favicon",
+                "label": "favicon 9498",
+                "name": "favicon_9498",
                 "type": "image",
                 "instructions": "",
                 "required": 0,
@@ -157,8 +109,8 @@
             },
             {
                 "key": "field_5c331c54455d6",
-                "label": "phone1",
-                "name": "phone1",
+                "label": "phone1 5793",
+                "name": "phone1_5793",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -176,8 +128,8 @@
             },
             {
                 "key": "field_5cd013bdeed66",
-                "label": "phone2",
-                "name": "phone2",
+                "label": "phone2 3446",
+                "name": "phone2_3446",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -195,8 +147,8 @@
             },
             {
                 "key": "field_5e31220d04ceb",
-                "label": "fax1",
-                "name": "fax1",
+                "label": "fax1 2558",
+                "name": "fax1_2558",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -214,8 +166,8 @@
             },
             {
                 "key": "field_5e31221504cec",
-                "label": "fax2",
-                "name": "fax2",
+                "label": "fax2 7017",
+                "name": "fax2_7017",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -233,8 +185,8 @@
             },
             {
                 "key": "field_5c331cd5455d9",
-                "label": "address1",
-                "name": "address1",
+                "label": "address1 4570",
+                "name": "address1_4570",
                 "type": "textarea",
                 "instructions": "",
                 "required": 0,
@@ -252,8 +204,8 @@
             },
             {
                 "key": "field_5ca1b537ca8dd",
-                "label": "address2",
-                "name": "address2",
+                "label": "address2 6406",
+                "name": "address2_6406",
                 "type": "textarea",
                 "instructions": "",
                 "required": 0,
@@ -271,8 +223,8 @@
             },
             {
                 "key": "field_5e12f969225d6",
-                "label": "email1",
-                "name": "email1",
+                "label": "email1 2818",
+                "name": "email1_2818",
                 "type": "email",
                 "instructions": "",
                 "required": 0,
@@ -289,8 +241,8 @@
             },
             {
                 "key": "field_5e12f972225d7",
-                "label": "email2",
-                "name": "email2",
+                "label": "email2 8212",
+                "name": "email2_8212",
                 "type": "email",
                 "instructions": "",
                 "required": 0,
@@ -307,10 +259,10 @@
             },
             {
                 "key": "field_5e312399102c0",
-                "label": "map_iframe1",
-                "name": "map_iframe1",
+                "label": "map1 5378",
+                "name": "map1_5378",
                 "type": "wysiwyg",
-                "instructions": "",
+                "instructions": "iframe",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -326,10 +278,10 @@
             },
             {
                 "key": "field_5e3123ca277e2",
-                "label": "map_iframe2",
-                "name": "map_iframe2",
+                "label": "map2 7736",
+                "name": "map2_7736",
                 "type": "wysiwyg",
-                "instructions": "",
+                "instructions": "iframe",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -361,8 +313,8 @@
             },
             {
                 "key": "field_5c331b8f6362a",
-                "label": "facebook",
-                "name": "facebook",
+                "label": "facebook 9092",
+                "name": "facebook_9092",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -377,8 +329,8 @@
             },
             {
                 "key": "field_5c331b9a6362b",
-                "label": "twitter",
-                "name": "twitter",
+                "label": "twitter 5247",
+                "name": "twitter_5247",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -393,8 +345,8 @@
             },
             {
                 "key": "field_5c331ba16362c",
-                "label": "linkedin",
-                "name": "linkedin",
+                "label": "linkedin 3814",
+                "name": "linkedin_3814",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -409,8 +361,8 @@
             },
             {
                 "key": "field_5e12c171dbf5c",
-                "label": "instagram",
-                "name": "instagram",
+                "label": "instagram 1315",
+                "name": "instagram_1315",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -425,8 +377,24 @@
             },
             {
                 "key": "field_5e12c17ddbf5d",
-                "label": "pinterest",
-                "name": "pinterest",
+                "label": "pinterest 1532",
+                "name": "pinterest_1532",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e3c0261f9087",
+                "label": "snapchat 1078",
+                "name": "snapchat_1078",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -441,8 +409,8 @@
             },
             {
                 "key": "field_5e12c190dbf5e",
-                "label": "youtube",
-                "name": "youtube",
+                "label": "youtube 6674",
+                "name": "youtube_6674",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -457,8 +425,8 @@
             },
             {
                 "key": "field_5e12c2ca498cb",
-                "label": "medium",
-                "name": "medium",
+                "label": "medium 6414",
+                "name": "medium_6414",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -473,8 +441,8 @@
             },
             {
                 "key": "field_5e12c2e4498cc",
-                "label": "dribbble",
-                "name": "dribbble",
+                "label": "dribbble 6553",
+                "name": "dribbble_6553",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -489,8 +457,8 @@
             },
             {
                 "key": "field_5e12c2f8498cd",
-                "label": "behance",
-                "name": "behance",
+                "label": "behance 8042",
+                "name": "behance_8042",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -505,8 +473,8 @@
             },
             {
                 "key": "field_5e12c68db21b3",
-                "label": "skype",
-                "name": "skype",
+                "label": "skype 2681",
+                "name": "skype_2681",
                 "type": "text",
                 "instructions": "",
                 "required": 0,
@@ -523,23 +491,84 @@
                 "maxlength": ""
             },
             {
-                "key": "field_5e155eb13e2da",
-                "label": "my_select_values",
-                "name": "my_select_values",
-                "type": "textarea",
+                "key": "field_5e3c027bf9088",
+                "label": "vimeo 8216",
+                "name": "vimeo_8216",
+                "type": "url",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "",
+                    "width": "50",
                     "class": "",
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": ""
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e3c0284f9089",
+                "label": "tumblr 8383",
+                "name": "tumblr_8383",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e3c02bcf908a",
+                "label": "flickr 1688",
+                "name": "flickr_1688",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e3c02ccf908b",
+                "label": "yahoo 7454",
+                "name": "yahoo_7454",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e3c02d5f908c",
+                "label": "reddit 3324",
+                "name": "reddit_3324",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
             },
             {
                 "key": "field_5e157bef947e2",
@@ -559,123 +588,14 @@
             },
             {
                 "key": "field_5e157c04947e3",
-                "label": "placeholder_image",
-                "name": "placeholder_image",
+                "label": "placeholder image 9386",
+                "name": "placeholder_image_9386",
                 "type": "image",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_5e157c2b54c78",
-                "label": "placeholder_image_webp",
-                "name": "placeholder_image_webp",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "50",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_5e293a2566f9c",
-                "label": "Woocommerce",
-                "name": "",
-                "type": "tab",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "placement": "left",
-                "endpoint": 0
-            },
-            {
-                "key": "field_5e293a5bd7a60",
-                "label": "shop_banner_image",
-                "name": "shop_banner_image",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "33.33",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "thumbnail",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            {
-                "key": "field_5e2bcb6e6eeaa",
-                "label": "max_cart_quantity",
-                "name": "max_cart_quantity",
-                "type": "number",
-                "instructions": "1 to 10",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "33.33",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "min": 1,
-                "max": 10,
-                "step": 1
-            },
-            {
-                "key": "field_5e2fff0c5acb0",
-                "label": "cart_banner_image",
-                "name": "cart_banner_image",
-                "type": "image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
                     "class": "",
                     "id": ""
                 },
@@ -701,12 +621,12 @@
             ]
         ],
         "menu_order": 1000,
-        "position": "normal",
+        "position": "acf_after_title",
         "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
-        "active": 1,
+        "active": true,
         "description": ""
     }
 ]
