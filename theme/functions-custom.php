@@ -373,6 +373,7 @@ add_action( 'pre_get_posts', 'na_parse_request' );
 | https://www.coderomeos.org/select-and-copy-data-to-clipboard-using-jquery
 |--------------------------------------------------------------------------
 */
+add_action('acf/input/admin_footer', 'my_acf_input_admin_footer');
 function my_acf_input_admin_footer() {
 	if ( get_post_type() != 'acf-field-group' ) { ?>
 		<script type="text/javascript">
@@ -390,15 +391,67 @@ function my_acf_input_admin_footer() {
 		<?php
 	}
 }
-add_action('acf/input/admin_footer', 'my_acf_input_admin_footer');
 
-add_action('acf/render_field', 'show_field_details', 1);
+// Basic
+add_action('acf/prepare_field/type=text', 'show_field_details', 1);
+add_action('acf/prepare_field/type=textarea', 'show_field_details', 1);
+add_action('acf/prepare_field/type=number', 'show_field_details', 1);
+add_action('acf/prepare_field/type=range', 'show_field_details', 1);
+add_action('acf/prepare_field/type=email', 'show_field_details', 1);
+add_action('acf/prepare_field/type=url', 'show_field_details', 1);
+add_action('acf/prepare_field/type=password', 'show_field_details', 1);
+
+// Content
+add_action('acf/prepare_field/type=image', 'show_field_details', 1);
+add_action('acf/prepare_field/type=file', 'show_field_details', 1);
+add_action('acf/prepare_field/type=wysiwyg', 'show_field_details', 1);
+add_action('acf/prepare_field/type=oembed', 'show_field_details', 1);
+add_action('acf/prepare_field/type=gallery', 'show_field_details', 1);
+
+// Choice
+add_action('acf/prepare_field/type=select', 'show_field_details', 1);
+add_action('acf/prepare_field/type=checkbox', 'show_field_details', 1);
+add_action('acf/prepare_field/type=radio', 'show_field_details', 1);
+add_action('acf/prepare_field/type=button_group', 'show_field_details', 1);
+add_action('acf/prepare_field/type=true_false', 'show_field_details', 1);
+
+// Relational
+add_action('acf/prepare_field/type=link', 'show_field_details', 1);
+add_action('acf/prepare_field/type=post_object', 'show_field_details', 1);
+add_action('acf/prepare_field/type=page_link', 'show_field_details', 1);
+add_action('acf/prepare_field/type=relationship', 'show_field_details', 1);
+add_action('acf/prepare_field/type=taxonomy', 'show_field_details', 1);
+add_action('acf/prepare_field/type=user', 'show_field_details', 1);
+
+// jQuery
+add_action('acf/prepare_field/type=google_map', 'show_field_details', 1);
+add_action('acf/prepare_field/type=date_picker', 'show_field_details', 1);
+add_action('acf/prepare_field/type=date_time_picker', 'show_field_details', 1);
+add_action('acf/prepare_field/type=time_picker', 'show_field_details', 1);
+add_action('acf/prepare_field/type=color_picker', 'show_field_details', 1);
+
+// Layout
+//add_action('acf/prepare_field/type=message', 'show_field_details', 1);
+add_action('acf/prepare_field/type=accordion', 'show_field_details', 1);
+//add_action('acf/prepare_field/type=tab', 'show_field_details', 1);
+add_action('acf/prepare_field/type=group', 'show_field_details', 1);
+add_action('acf/prepare_field/type=repeater', 'show_field_details', 1);
+add_action('acf/prepare_field/type=flexible_content', 'show_field_details', 1);
+add_action('acf/prepare_field/type=clone', 'show_field_details', 1);
+
 function show_field_details($field) {
-	if ( get_post_type() !='acf-field-group' ) {
-		echo '
-	<div class="description copy-to-clipboard" style="margin-bottom: 10px;">
+	$field['label'] .= '<div class="description copy-to-clipboard" style="margin-bottom: 10px; margin-top: 10px;">
 		<input readonly="readonly" type="text" value="'.trim($field['_name']).'" style="color: #0c5460;">
-	</div>
-	';
-	}
+	</div>';
+	return $field;
+}
+
+add_action('acf/field_group/admin_footer', 'my_acf_field_group_admin_footer');
+function my_acf_field_group_admin_footer() { ?>
+	<script type="text/javascript">
+        (function( $ ){
+            $('.description.copy-to-clipboard').remove();
+        })(jQuery);
+	</script>
+	<?php
 }
