@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Home Page */
+/* Template Name: Home */
 get_header();
 
 if ( have_posts() ) {

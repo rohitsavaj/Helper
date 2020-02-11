@@ -146,3 +146,7 @@ jQuery(function ($) {
     });
 // first last li and remove class
 });
+
+$(function() {
+    console.log( "ready!" );
+});
