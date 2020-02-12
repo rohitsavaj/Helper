@@ -23,7 +23,47 @@ function wp_enqueue_scripts_fun() {
 	}
 	wp_enqueue_script('custom-js', get_template_directory_uri().'/js/custom.js', array(),null,true);
 }
+
+function wp_enqueue_remove_fun() {
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+	wp_deregister_script( 'wp-embed' );
+	wp_dequeue_style( 'twentysixteen-block-style' );
+	wp_dequeue_style( 'genericons' );
+	wp_dequeue_style( 'twentysixteen-ie' );
+	wp_dequeue_style( 'twentysixteen-ie8' );
+	wp_dequeue_style( 'twentysixteen-ie7' );
+	wp_dequeue_style( 'twentysixteen-fonts' );
+	wp_deregister_script( 'twentysixteen-html5' );
+	wp_deregister_script( 'twentysixteen-skip-link-focus-fix' );
+	wp_deregister_script( 'twentysixteen-script' );
+}
 add_action('wp_enqueue_scripts', 'wp_enqueue_scripts_fun',11);
+add_action('wp_enqueue_scripts', 'wp_enqueue_remove_fun',11);
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles', 10 );
+remove_action( 'wp_head', 'feed_links_extra', 3 ); // Display the links to the extra feeds such as category feeds
+remove_action( 'wp_head', 'feed_links', 2 ); // Display the links to the general feeds: Post and Comment Feed
+remove_action( 'wp_head', 'rsd_link' ); // Display the link to the Really Simple Discovery service endpoint, EditURI link
+remove_action( 'wp_head', 'wlwmanifest_link' ); // Display the link to the Windows Live Writer manifest file.
+remove_action( 'wp_head', 'index_rel_link' ); // index link
+remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 ); // prev link
+remove_action( 'wp_head', 'start_post_rel_link', 10, 0 ); // start link
+remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); // Display relational links for the posts adjacent to the current post.
+remove_action( 'wp_head', 'wp_generator' ); // Display the XHTML generator that is generated on the wp_head hook, WP version
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links');
+remove_action( 'wp_head', 'rest_output_link_wp_head' );
+remove_action( 'wp_head', 'wp_shortlink_wp_head');
+remove_action('wp_head', 'wp_resource_hints', 2);
+remove_action( 'wp_head', 'twentysixteen_javascript_detection' );
+
+function remove_recent_comments_style() {
+	global $wp_widget_factory;
+	remove_action('wp_head', array($wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style'));
+}
+add_action('widgets_init', 'remove_recent_comments_style');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -85,7 +125,7 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 
 /*
 |--------------------------------------------------------------------------
-| disable gutenberg
+| gutenberg disable
 |--------------------------------------------------------------------------
 */
 add_filter( 'use_block_editor_for_post', '__return_false', 10 );
@@ -102,6 +142,7 @@ function wpse156165_menu_add_class( $atts, $item, $args ) {
   $atts['class'] = $class;
   return $atts;
 }
+
 add_filter( 'nav_menu_css_class', 'secondary_li_class', 10, 2 );
 function secondary_li_class( $classes, $item ) {
   global $post;
@@ -188,42 +229,6 @@ if ( $post_type == 'practice-area' || $post_type == 'city') {
 return '__true';
 }
 add_filter( 'custom_permalinks_exclude_post_type', 'custom_permalinks_exclude_post_type_fun');
-
-/*
-|--------------------------------------------------------------------------
-| menu title
-|--------------------------------------------------------------------------
-*/
-function filter_nav_menu_items($menu){
-	$post_type = ($menu->object); //gets post type
-	//if post type is a page, then create a new URL
-	if ($post_type === 'practicearea') {
-		$menu_title = get_field('menu_title',$menu->ID) ? ' ('.get_field('menu_title',$menu->ID) . ')' : '' ;
-		$menu->post_title = $menu->post_title . $menu_title;
-		$menu->title = $menu->title . $menu_title;
-	}
-	return $menu; //return the filtered object
-}
-add_filter( 'wp_setup_nav_menu_item', 'filter_nav_menu_items', 1 );
-
-class Set_Title_Walker_Nav_Menu extends Walker_Nav_Menu {
-	function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		$classes[] = 'menu-item-' . $item->ID;
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args, $depth ) );
-		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-		$menu_title = get_field('menu_title',$item->object_id) ? get_field('menu_title',$item->object_id) : $item->title ;
-		$output .= sprintf( "\n<li %s><a href='%s' title='%s' >%s</a>\n", $class_names, $item->url, $menu_title, $menu_title );
-	}
-}
-
-//Use
-wp_nav_menu( [
-	'theme_location' => 'primary',
-	'container'      => false,
-	'menu_class'     => 'nav navbar-nav',
-	'walker'         => new Set_Title_Walker_Nav_Menu(),
-] );
 
 /*
 |--------------------------------------------------------------------------
@@ -321,7 +326,7 @@ function webp_upload_mimes($existing_mimes) {
 }
 add_filter('mime_types', 'webp_upload_mimes');
 
-//enable preview / thumbnail for webp image files.
+//enable preview
 function webp_is_displayable($result, $path) {
 	if ($result === false) {
 		$displayable_image_types = array( IMAGETYPE_WEBP );
@@ -448,6 +453,11 @@ function show_field_details($field) {
 
 add_action('acf/field_group/admin_footer', 'my_acf_field_group_admin_footer');
 function my_acf_field_group_admin_footer() { ?>
+	<style>
+		.description.copy-to-clipboard {
+			display: none !important;
+		}
+	</style>
 	<script type="text/javascript">
         (function( $ ){
             $('.description.copy-to-clipboard').remove();
