@@ -1,0 +1,15 @@
+body {
+    position: relative;
+    color: #000;
+}
+ul.nav-pills {
+    top: 20px;
+    position: fixed;
+}
+div.col-8 div {
+    height: 500px;
+}
+.pre-height {
+    max-height: 25em;
+    min-height: 5em;
+}
