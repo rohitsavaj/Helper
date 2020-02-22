@@ -645,6 +645,7 @@
 						function grd_woocommerce_script_cleaner() {
 
 							// Remove the generator tag
+							// https://gist.github.com/gregrickaby/2846416
 							remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
 
 							// Unless we're in the store, remove all the cruft!
