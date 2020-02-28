@@ -1,7 +1,7 @@
 [
     {
         "key": "group_5c331ae474a8f",
-        "title": "Theme Options",
+        "title": "Theme Options 1000",
         "fields": [
             {
                 "key": "field_5c331ae876d56",
@@ -93,7 +93,7 @@
             },
             {
                 "key": "field_5c626c761dca9",
-                "label": "Phone, Fax, Email, Address, Map",
+                "label": "Phone, Fax, Email, Timing, Address, Map",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -187,7 +187,7 @@
                 "key": "field_5c331cd5455d9",
                 "label": "address1 4570",
                 "name": "address1_4570",
-                "type": "textarea",
+                "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -197,16 +197,16 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": 3,
-                "new_lines": "br"
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 0,
+                "delay": 1
             },
             {
                 "key": "field_5ca1b537ca8dd",
                 "label": "address2 6406",
                 "name": "address2_6406",
-                "type": "textarea",
+                "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -216,10 +216,10 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": 3,
-                "new_lines": "br"
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 0,
+                "delay": 1
             },
             {
                 "key": "field_5e12f969225d6",
@@ -256,6 +256,44 @@
                 "placeholder": "",
                 "prepend": "",
                 "append": ""
+            },
+            {
+                "key": "field_5e5351c1e1042",
+                "label": "timing1 4657",
+                "name": "timing1_4657",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 1
+            },
+            {
+                "key": "field_5e5351dce1043",
+                "label": "timing2 1612",
+                "name": "timing2_1612",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 1
             },
             {
                 "key": "field_5e312399102c0",
@@ -297,7 +335,7 @@
             },
             {
                 "key": "field_5c626c8c1dcaa",
-                "label": "Social",
+                "label": "Social, Forms",
                 "name": "",
                 "type": "tab",
                 "instructions": "",
@@ -363,6 +401,22 @@
                 "key": "field_5e12c171dbf5c",
                 "label": "instagram 1315",
                 "name": "instagram_1315",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5e5354f880206",
+                "label": "google 6451",
+                "name": "google_6451",
                 "type": "url",
                 "instructions": "",
                 "required": 0,
@@ -569,6 +623,50 @@
                 },
                 "default_value": "",
                 "placeholder": ""
+            },
+            {
+                "key": "field_5e58efdff844d",
+                "label": "from 1",
+                "name": "from_1",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "wpcf7_contact_form"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "id",
+                "ui": 1
+            },
+            {
+                "key": "field_5e58f000f844e",
+                "label": "from 2",
+                "name": "from_2",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "wpcf7_contact_form"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "id",
+                "ui": 1
             },
             {
                 "key": "field_5e157bef947e2",

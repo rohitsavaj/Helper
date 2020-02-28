@@ -11,13 +11,15 @@ your-subject
 [text your-subject class:form-control placeholder "Subject"]
 
 your-message
-[textarea your-message class:form-control placeholder "Brief description of your legal issue"]
+[textarea your-message class:form-control placeholder "Message"]
 [textarea* your-message x3 class:form-control] <!-- only rows -->
 [textarea* your-message 10x class:form-control] <!-- only columns -->
 [textarea* your-message 10x3 class:form-control] <!-- both -->
 
 your-zip
 [text your-zip class:form-control placeholder "Zip Code"]
+
+wpcf7-submit
 
 To  shruti.radadiya@webslaw.com,tushar.patel@webslaw.com,harsh.vasitha@webslaw.com,rohit.savaj@webslaw.com,rajni.sharma@webslaw.com,madhuri.dedania@webslaw.com
 
@@ -72,7 +74,7 @@ acceptance_as_validation: on
 <summary>How would you like to be contacted? Check all that apply. *</summary>
 
 
-wpcf7-submit
+
 
 terms:
 [acceptance acceptance-195] I have read the <a href="https://www.kornberglawfirm.com/Disclaimer" title="Disclaimer" target="_blank">Disclaimer</a> and <a href="https://www.kornberglawfirm.com/Privacy-Policy" title="Privacy" target="_blank"> Privacy Policy</a> Terms.
